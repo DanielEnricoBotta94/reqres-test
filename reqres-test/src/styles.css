@@ -32,8 +32,8 @@ html, body, head{
     text-align: center;
 }
 
-.blue{
-    background: rgb(24, 24, 255);
+.primary{
+    background: linear-gradient(0.25turn,  rgb(70, 0, 182), rgb(0, 100, 182));
 }
 
 .button{
