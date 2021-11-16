@@ -1,0 +1,25 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+head, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.white-text{
+    color: white;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.title{
+    font-size: 2rem;
+}
