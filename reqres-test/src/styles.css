@@ -2,12 +2,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
-head, body{
+html, head, body{
     margin: 0;
     padding: 0;
 }
 
-body{
+html, body, head{
     height: 100%;
     width: 100%;
 }
@@ -22,4 +22,12 @@ body{
 
 .title{
     font-size: 2rem;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.center{
+    text-align: center;
 }
