@@ -31,3 +31,13 @@ html, body, head{
 .center{
     text-align: center;
 }
+
+.blue{
+    background: rgb(24, 24, 255);
+}
+
+.button{
+    padding: 10px;
+    border-radius: 5%;
+    cursor: pointer;
+}

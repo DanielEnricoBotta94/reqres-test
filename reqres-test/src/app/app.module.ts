@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -9,7 +8,8 @@ import { UserDetailsComponent } from './pages/user-details/user-details.componen
 import { HeaderComponent } from './components/header/header.component';
 import { UserService } from './services/user.service';
 import { UserListComponent } from './pages/user-list/user-list.component';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     UserComponent,
     UserDetailsComponent,
     HeaderComponent,
-    UserListComponent
+    UserListComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

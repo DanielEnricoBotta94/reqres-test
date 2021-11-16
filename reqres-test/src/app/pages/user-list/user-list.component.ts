@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
@@ -12,7 +13,7 @@ export class UserListComponent implements OnInit {
 
   users: Array<User> = [];
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.listUsers();
@@ -27,5 +28,9 @@ export class UserListComponent implements OnInit {
       .catch(error => {
         console.error(error);
       });
+  }
+
+  click(id: number){
+    this.router.navigate(['/user-details', id]);
   }
 }

@@ -1,5 +1,5 @@
 <div class="users">
     <ng-container *ngFor="let user of users">
-        <app-user [user]="user"></app-user>
+        <app-user [user]="user" (onClick)="click($event)"></app-user>
     </ng-container>
 </div>
