@@ -36,8 +36,10 @@ html, body, head{
     background: linear-gradient(0.25turn,  rgb(70, 0, 182), rgb(0, 100, 182));
 }
 
-.button{
+.button,
+button{
     padding: 10px;
     border-radius: 5%;
     cursor: pointer;
+    color: white;
 }

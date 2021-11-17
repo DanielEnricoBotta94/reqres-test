@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { UserGet, UserList } from '../models/user.model';
+import { User, UserGet, UserList } from '../models/user.model';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 
@@ -20,8 +20,8 @@ export class UserService {
     return this.http.get<UserGet>(url);
   }
   
-  put(id: number): Observable<boolean>{
-    const url = `https://reqres.in/api/users/${id}`;
-    return this.http.get<boolean>(url);
+  put(user: User): Observable<any>{
+    const url = `https://reqres.in/api/users/${user.id}`;
+    return this.http.put(url, user);
   }
 }
