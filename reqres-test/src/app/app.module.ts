@@ -11,6 +11,7 @@ import { UserListComponent } from './pages/user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserDetailsComponent,
     HeaderComponent,
     UserListComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

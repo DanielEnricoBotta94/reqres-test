@@ -5,14 +5,14 @@
     <div class="container-text">
       <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
         <label for="first-name">First Name: </label>
-        <input id="first-name" type="text" formControlName="first_name" placeholder="First Name">
+        <input id="first-name" type="text" formControlName="first_name" placeholder="First Name" required>
         <label for="last-name">Last Name: </label>
-        <input id="last-name" type="text" formControlName="last_name" placeholder="Last Name">
+        <input id="last-name" type="text" formControlName="last_name" placeholder="Last Name" required>
         <label for="email">Email Name: </label>
-        <input id="email" type="email" formControlName="email" placeholder="Email address">
+        <input id="email" type="email" formControlName="email" placeholder="Email address" required>
         <div class="action-bar">
           <button class="primary" type="button" routerLink="/home">Back</button>
-          <button class="primary" type="submit" [disabled]="!userForm.valid">Submit</button>
+          <button class="primary" type="submit">Submit</button>
         </div>
       </form>
     </div>

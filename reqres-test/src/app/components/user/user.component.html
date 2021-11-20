@@ -1,7 +1,9 @@
 <div class="card pointer" (click)="click()">
-    <img src="{{user.avatar}}" alt="Avatar">
+    <div class="avatar">
+        <img src="{{user.avatar}}" alt="Avatar">
+    </div>
     <div class="container">
-        <h4><b>{{user.first_name}} {{user.last_name}}</b></h4> 
+        <h5><b>{{user.first_name}} {{user.last_name}}</b></h5> 
         <p class="email">{{user.email}}</p> 
     </div>
 </div>

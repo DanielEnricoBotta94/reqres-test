@@ -12,6 +12,8 @@ import { UserService } from 'src/app/services/user.service';
 export class UserListComponent implements OnInit {
 
   users: Array<User> = [];
+  mode: 'table' | 'card' = 'card';
+  totalPages = 0;
 
   constructor(private userService: UserService, private router: Router) { }
 
@@ -19,15 +21,20 @@ export class UserListComponent implements OnInit {
     this.listUsers();
   }
 
-  async listUsers(){
-    const userList$ = this.userService.list();
+  async listUsers(page: number = 1){
+    const userList$ = this.userService.list(page);
     await firstValueFrom(userList$)
       .then(response => {
         this.users = response.data;
+        this.totalPages = response.total_pages;
       })
       .catch(error => {
         console.error(error);
       });
+  }
+
+  onPageChange($event: number){
+    this.listUsers($event);
   }
 
   click(id: number){

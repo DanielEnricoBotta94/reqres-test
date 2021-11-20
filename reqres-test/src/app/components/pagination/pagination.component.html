@@ -1,0 +1,16 @@
+<div class="page-actions">
+    <div (click)="changePage(1)" class="first"
+        [ngClass]="{'disabled': selectedPage === 1}">&lt;&lt;</div>
+    <div (click)="changePage(selectedPage - 1)" class="back"
+        [ngClass]="{'disabled': selectedPage === 1}">&lt;</div>
+    <ng-container *ngFor="let page of pages">
+        <div *ngIf="selectedPage + Math.floor(maxPages / 2) >= page &&
+                    selectedPage - Math.floor(maxPages / 2) <= page"
+        (click)="changePage(page)"
+        [ngClass]="{'active': selectedPage === page}">{{page}}</div>
+    </ng-container>
+    <div (click)="changePage(selectedPage + 1)" class="forward"
+        [ngClass]="{'disabled': selectedPage === pages.length}">&gt;</div>
+    <div (click)="changePage(pages.length)" class="last"
+        [ngClass]="{'disabled': selectedPage === pages.length}">&gt;&gt;</div>
+</div>

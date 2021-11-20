@@ -5,6 +5,10 @@
   object-position: center;
 }
 
+img{
+    border-radius: 5%;
+}
+
 h2 {
     padding: 10px 0px 0 10px;
     margin: 0;

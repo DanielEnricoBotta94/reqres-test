@@ -21,7 +21,7 @@ html, body, head{
 }
 
 .title{
-    font-size: 2rem;
+    font-size: clamp(1rem, 12vw, 2rem);
 }
 
 .pointer{

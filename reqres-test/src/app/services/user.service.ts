@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User, UserGet, UserList } from '../models/user.model';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpParams } from '@angular/common/http'
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,8 +10,8 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  list(): Observable<UserList>{
-    const url = "https://reqres.in/api/users";
+  list(page: number): Observable<UserList>{
+    const url = `https://reqres.in/api/users?page=${page}`;
     return this.http.get<UserList>(url);
   }
   

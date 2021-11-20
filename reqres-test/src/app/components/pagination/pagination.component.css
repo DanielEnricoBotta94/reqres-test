@@ -1,0 +1,42 @@
+.page-actions{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-actions div{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid black;
+    border-top: 1px  solid black;
+    border-bottom: 1px  solid black;
+}
+
+.active {
+    background: linear-gradient(0.25turn, rgb(70, 0, 182), rgb(0, 100, 182));
+    color: white;
+}
+
+.disabled{
+    color: #424242;
+    background: #aeaeae;
+    cursor: initial !important;
+}
+
+.first{
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-left: 1px solid black;
+}
+
+.last{
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}

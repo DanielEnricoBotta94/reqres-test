@@ -4,3 +4,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.pagination{
+    padding: 10px;
+}

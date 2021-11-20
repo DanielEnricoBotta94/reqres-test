@@ -59,6 +59,8 @@ export class UserDetailsComponent implements OnInit {
   }
 
   async onSubmit(){
+    if(!this.userForm.valid)
+      return;
     this.user = { ...this.user, ...this.userForm.value }
     const put$ = this.userService.put(this.user);
     await firstValueFrom(put$)
