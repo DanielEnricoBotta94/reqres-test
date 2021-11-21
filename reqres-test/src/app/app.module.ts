@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,10 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [UserService],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
