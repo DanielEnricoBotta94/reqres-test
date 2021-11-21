@@ -12,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 export class UserListComponent implements OnInit {
 
   users: Array<User> = [];
-  mode: 'table' | 'card' = 'card';
+  mode: 'card' | 'table' = 'card';
   totalPages = 0;
 
   constructor(private userService: UserService, private router: Router) { }

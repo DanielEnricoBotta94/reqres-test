@@ -14,9 +14,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid black;
-    border-top: 1px  solid black;
-    border-bottom: 1px  solid black;
+    border-right: 1px solid #5a5a5a;
+    border-top: 1px  solid #5a5a5a;
+    border-bottom: 1px  solid #5a5a5a;
 }
 
 .active {
@@ -33,7 +33,7 @@
 .first{
     border-top-left-radius: 5%;
     border-bottom-left-radius: 5%;
-    border-left: 1px solid black;
+    border-left: 1px solid #5a5a5a;
 }
 
 .last{

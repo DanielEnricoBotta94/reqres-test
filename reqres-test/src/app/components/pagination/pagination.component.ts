@@ -20,7 +20,7 @@ export class PaginationComponent implements OnInit {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-      if (changes['items'].currentValue === changes['items'].previousValue) 
+      if (changes['totalPages'].currentValue === changes['totalPages'].previousValue) 
         return;  
 
       this.initPaginator();
