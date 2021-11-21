@@ -5,14 +5,17 @@
     <div class="container-text">
       <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
         <label for="first-name">First Name: </label>
+        <span *ngIf="userForm.controls['first_name'].status !== 'VALID'" class="error">Field required</span>
         <input id="first-name" type="text" formControlName="first_name" placeholder="First Name" required>
         <label for="last-name">Last Name: </label>
+        <span *ngIf="userForm.controls['last_name'].status !== 'VALID'" class="error">Field required</span>
         <input id="last-name" type="text" formControlName="last_name" placeholder="Last Name" required>
         <label for="email">Email: </label>
+        <span *ngIf="userForm.controls['email'].status !== 'VALID'" class="error">Email must be valid</span>
         <input id="email" type="email" formControlName="email" placeholder="Email address" required>
         <div class="action-bar">
           <button class="primary" type="button" routerLink="/home">Back</button>
-          <button class="primary" type="submit">Save</button>
+          <button class="primary" type="submit" [disabled]="!userForm.valid">Save</button>
         </div>
       </form>
     </div>
