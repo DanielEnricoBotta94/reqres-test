@@ -33,7 +33,7 @@ export class PaginationComponent implements OnInit {
   }
 
   changePage(page: number) {
-      if (this.selectedPage === page)
+      if (this.selectedPage === page || this.totalPages < page || 0 >= page)
         return;
       this.selectedPage = page;
       this.onPageChange.emit(page);
